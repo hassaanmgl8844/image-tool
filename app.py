@@ -144,5 +144,8 @@ with gr.Blocks(css=css, theme=gr.themes.Base()) as app:
     cvid_btn.click(fn=convert_vid, inputs=[cvid_in, vid_fmt], outputs=cvid_out)
 
 
+# if __name__ == "__main__":
+#     app.launch()
+
 if __name__ == "__main__":
-    app.launch()
+    app.launch(server_name="0.0.0.0", server_port=7860)
