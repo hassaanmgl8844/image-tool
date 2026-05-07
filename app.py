@@ -57,3 +57,13 @@ def convert_vid(vid_path, fmt):
         return None
     
     return output
+
+
+if __name__ == "__main__":
+    print("pillow:", Image.__version__)
+    print("gradio:", gr.__version__)
+    print("rembg: ok")
+    print("ffmpeg:", end=" ")
+    r = subprocess.run(["ffmpeg", "-version"], capture_output=True)
+    print("ok" if r.returncode == 0 else "NOT FOUND")
+    print("\nall good!")
